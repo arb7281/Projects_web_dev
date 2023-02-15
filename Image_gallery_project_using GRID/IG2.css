@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    /* width: 100vw; */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+.container{
+    max-width: 1200px;
+    height: 100%;
+    margin: 10px auto;
+    
+    padding: 20px; 
+}
+ 
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+font-family: sans-serif;
+    margin-bottom: 20px;
+}
+.gallery{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 20px;
+    /* justify-content: space-between; */ 
+}
+.card{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+border-radius: 10px; 
+overflow: hidden; 
+
+}
+
+img{
+    width: 100%;
+     height: 100%; /* isase card ki puri height barabar iski height ho jayegi jisse text background me chla jayega */
+     filter: grayscale(100%);
+   object-fit: cover;
+}
+
+figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5)0%, rgba(255,255,25,0)100%);
+   }
+
+   .card:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px black);
+    transition: 0.5s;
+  
+}
+
+
+ .card:hover img{
+    filter: grayscale(0%);
+ }  
+
+ .card:hover figcaption{
+    opacity: 1;
+    transition: 0.8s;
+    transform: scale(1.1);
+ }
